@@ -2311,7 +2311,7 @@ fieldset[disabled] .btn-white.active {
 .btn-primary {
   color: white;
   background-color: #1582dc;
-  border-color: #1374c5;
+  border-color: #ffffff;
 }
 .btn-primary:hover,
 .btn-primary:focus,
@@ -2320,7 +2320,7 @@ fieldset[disabled] .btn-white.active {
 .open .dropdown-toggle.btn-primary {
   color: white;
   background-color: #1374c5;
-  border-color: #ffffff;
+  border-color: #1374c5;
 }
 .btn-primary.btn-outline {
   background-color: transparent;
