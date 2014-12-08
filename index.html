@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="home no-js" lang="">
 
 <head>
@@ -37,13 +37,29 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- core scripts -->
+    <script src="plugins/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="plugins/appear/jquery.appear.js"></script>
+    <script src="plugins/nav/jquery.nav.js"></script>
+    <script src="plugins/jquery.easing.min.js"></script>
+    <!-- /core scripts -->
+
     <!-- load modernizer -->
     <script src="plugins/modernizr.js"></script>
+	<script type="text/javascript">
+
+	function generateCodeLines() {
+	  	var date = new Date();
+		var codelines = (365 * (date.getFullYear() - 2013) + 30 * date.getMonth() + date.getDay()) * 50;
+	    	$("#codeLines").attr("data-to",codelines);
+        }
+    </script>
 </head>
 
 <!-- body -->
 
-<body>
+<body onload="generateCodeLines()">
 
     <!-- page loading spinner -->
     <div class="pageload">
@@ -206,7 +222,7 @@
 
                 <div class="col-sm-3 col-xs-6 p15">
                     <i class="count-icon ti-stats-up"></i>
-                    <b class="count" data-from="0" data-to="45469" data-appear-top-offset="-200">0</b>
+                    <b onload="generateCodeLines()" id ="codeLines" class="count" data-from="0" data-appear-top-offset="-200">0</b>
                     <span class="heading-font">Code Lines</span>
                 </div>
 
@@ -229,40 +245,6 @@
             </div>
 
             <div class="row">
-
-            	<!-- Logos para quedar bien con Seba -->
-                <div class="col-lg-4 section-title" data-animation="fadeInLeft">
-                    <div class="feature-description">
-                        <img src = "img/aa-2000.png" />
-                    </div>
-                </div>
-
-                <div class="col-lg-4 section-title" data-animation="fadeInDown">
-                    <div class="feature-description">
-                        <img src = "img/eset.png" />
-                    </div>
-                </div>
-
-                <div class="col-lg-4 section-title" data-animation="fadeInRight">
-                    <div class="feature-description">
-                        <img src = "img/visa.png" />
-                    </div>
-                </div>
-
-                <!-- Logos que van realmente -->
-
-                <!-- <div class="col-lg-4 section-title" data-animation="fadeInRight">
-                    <div class="feature-description">
-                        <img src = "img/dux.png" />
-                    </div>
-                </div> -->
-
-                <!-- <div class="col-lg-4 section-title" data-animation="fadeInLeft">
-                    <div class="feature-description">
-                        <img src = "img/santander-rio.png" />
-                    </div>
-                </div>
-
                 <div class="col-lg-4 section-title" data-animation="fadeInDown">
                     <div class="feature-description">
                         <img src = "img/aa-2000.png" />
@@ -274,13 +256,6 @@
                         <img src = "img/eset.png" />
                     </div>
                 </div>
-
-                <div class="col-lg-4 section-title" data-animation="fadeInLeft">
-                    <div class="feature-description">
-                        <img src = "img/sprayette.png" />
-                    </div>
-                </div>
-
                 <div class="col-lg-4 section-title" data-animation="fadeInUp">
                     <div class="feature-description">
                         <img src = "img/visa.png" />
@@ -289,9 +264,21 @@
 
                 <div class="col-lg-4 section-title" data-animation="fadeInRight">
                     <div class="feature-description">
-                        <img src = "img/dux.png" />
+                        <img src = "img/orly.png" />
                     </div>
-                </div> -->
+                </div>
+
+                <div class="col-lg-4 section-title" data-animation="fadeInRight">
+                    <div class="feature-description">
+                        <img src = "img/ypf.png" />
+                    </div>
+                </div>
+
+                <div class="col-lg-4 section-title" data-animation="fadeInRight">
+                    <div class="feature-description">
+                        <img src = "img/nestle.png" />
+                    </div>
+                </div> 
             </div>
 
         </div>
@@ -421,15 +408,6 @@
         </div>
     </footer>
     <!-- contact section -->
-
-    <!-- core scripts -->
-    <script src="plugins/jquery-1.11.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="plugins/appear/jquery.appear.js"></script>
-    <script src="plugins/nav/jquery.nav.js"></script>
-    <script src="plugins/jquery.easing.min.js"></script>
-    <!-- /core scripts -->
-
     <!-- page level scripts -->
     <script src="plugins/jquery.parallax.js"></script>
     <script src="plugins/isotope/isotope.pkgd.min.js"></script>
@@ -452,7 +430,6 @@
 	
 	<!-- changeText script -->
 	<script type="text/javascript">
-     
         function changeText(text)
         {
             var display = document.getElementById('blogBtn');
