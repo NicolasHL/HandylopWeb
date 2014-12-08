@@ -1,4 +1,4 @@
-/*
+﻿/*
 * Template Name: Sublime - Web Application Frontend Template
 * Version: 1.0
 * Author: Nyasha
@@ -87,8 +87,7 @@ object,
 video,
 iframe {
   border: 0;
-  max-width: 100%;
-  height: auto;
+  height: 100px;
 }
 iframe {
   width: 100%;
