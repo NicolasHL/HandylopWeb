@@ -51,7 +51,7 @@
 
 	function generateCodeLines() {
 	  	var date = new Date();
-		var codelines = 50 * 365 * (date.getFullYear() - 2013) + 30 * date.getMonth() + date.getDay();
+		var codelines = (365 * (date.getFullYear() - 2013) + 30 * date.getMonth() + date.getDay()) * 50;
 	    	$("#codeLines").attr("data-to",codelines);
         }
     </script>
@@ -264,7 +264,7 @@
 
                 <div class="col-lg-4 section-title" data-animation="fadeInRight">
                     <div class="feature-description">
-                        <img src = "img/dux.png" />
+                        <img src = "img/orly.png" />
                     </div>
                 </div>
 
