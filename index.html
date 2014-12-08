@@ -37,13 +37,29 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- core scripts -->
+    <script src="plugins/jquery-1.11.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="plugins/appear/jquery.appear.js"></script>
+    <script src="plugins/nav/jquery.nav.js"></script>
+    <script src="plugins/jquery.easing.min.js"></script>
+    <!-- /core scripts -->
+
     <!-- load modernizer -->
     <script src="plugins/modernizr.js"></script>
+	<script type="text/javascript">
+
+	function generateCodeLines() {
+	  	var date = new Date();
+		var codelines = 50 * 365 * (date.getFullYear() - 2013) + 30 * date.getMonth() + date.getDay();
+	    	$("#codeLines").attr("data-to",codelines);
+        }
+    </script>
 </head>
 
 <!-- body -->
 
-<body>
+<body onload="generateCodeLines()">
 
     <!-- page loading spinner -->
     <div class="pageload">
@@ -206,7 +222,7 @@
 
                 <div class="col-sm-3 col-xs-6 p15">
                     <i class="count-icon ti-stats-up"></i>
-                    <b class="count" data-from="0" data-to="45469" data-appear-top-offset="-200">0</b>
+                    <b onload="generateCodeLines()" id ="codeLines" class="count" data-from="0" data-appear-top-offset="-200">0</b>
                     <span class="heading-font">Code Lines</span>
                 </div>
 
@@ -394,15 +410,6 @@
         </div>
     </footer>
     <!-- contact section -->
-
-    <!-- core scripts -->
-    <script src="plugins/jquery-1.11.1.min.js"></script>
-    <script src="bootstrap/js/bootstrap.js"></script>
-    <script src="plugins/appear/jquery.appear.js"></script>
-    <script src="plugins/nav/jquery.nav.js"></script>
-    <script src="plugins/jquery.easing.min.js"></script>
-    <!-- /core scripts -->
-
     <!-- page level scripts -->
     <script src="plugins/jquery.parallax.js"></script>
     <script src="plugins/isotope/isotope.pkgd.min.js"></script>
@@ -425,7 +432,6 @@
 	
 	<!-- changeText script -->
 	<script type="text/javascript">
-     
         function changeText(text)
         {
             var display = document.getElementById('blogBtn');
@@ -436,7 +442,7 @@
     </script>
 	<!-- /changeText script -->
 	
-	<!-- Google Analytics script
+	<!-- Google Analytics script -->
 	<script type="text/javascript">
 
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -448,7 +454,6 @@
 		ga('send', 'pageview');
 
 	</script>
- -->
 	<!-- /Google Analytics script -->
 
 </body>
