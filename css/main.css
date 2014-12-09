@@ -944,6 +944,13 @@ footer.content-section .container,
   list-style: none;
 }
 /*
+ *  Section Customers
+ *
+ */
+.customer-logo {
+  height: 100px;
+}
+/*
  *  Section Contact
  *
  */
