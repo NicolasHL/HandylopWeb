@@ -47,19 +47,11 @@
 
     <!-- load modernizer -->
     <script src="plugins/modernizr.js"></script>
-	<script type="text/javascript">
-
-	function generateCodeLines() {
-	  	var date = new Date();
-		var codelines = (365 * (date.getFullYear() - 2013) + 30 * date.getMonth() + date.getDay()) * 50;
-	    	$("#codeLines").attr("data-to",codelines);
-        }
-    </script>
 </head>
 
 <!-- body -->
 
-<body onload="generateCodeLines()">
+<body>
 
     <!-- page loading spinner -->
     <div class="pageload">
@@ -222,7 +214,7 @@
 
                 <div class="col-sm-3 col-xs-6 p15">
                     <i class="count-icon ti-stats-up"></i>
-                    <b id ="codeLines" class="count" data-from="0" data-appear-top-offset="-200">0</b>
+                    <b id ="codeLines" class="count" data-from="0" data-appear-top-offset="-200" data-to="0">0</b>
                     <span class="heading-font">Code Lines</span>
                 </div>
 
@@ -442,6 +434,19 @@
             display.innerHTML = "";
             display.innerHTML = text;
         }
+
+		function generateCodeLines() {
+			setTimeout(function() {
+				var date = new Date();
+				var codelinesValue = (365 * (date.getFullYear() - 2013) + 30 * date.getMonth() + date.getDay()) * 50;
+				$('#codeLines').attr('data-to',codelinesValue);
+				$('#codeLines').html(codelinesValue);
+				$('#codeLines').load();
+
+			}, 2000);
+		}
+        
+        window.onload = generateCodeLines;
          
     </script>
 	<!-- /changeText script -->
